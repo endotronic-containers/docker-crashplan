@@ -1,5 +1,5 @@
 FROM phusion/baseimage:0.9.19
-MAINTAINER gfjardim <gfjardim@gmail.com>
+MAINTAINER endotronic <endotronic@gmail.com>
 
 #########################################
 ##        ENVIRONMENTAL CONFIG         ##
@@ -22,5 +22,5 @@ RUN sync && /bin/bash /files/tmp/install.sh
 #########################################
 ##         EXPORTS AND VOLUMES         ##
 #########################################
-VOLUME /data /config
+VOLUME /config /data
 EXPOSE 4243 4242 4280

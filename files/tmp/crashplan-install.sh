@@ -3,7 +3,6 @@
 # Install Crashplan
 TARGETDIR=/usr/local/crashplan
 BINSDIR="/usr/local/bin"
-CACHEDIR=/config/cache
 MANIFESTDIR=/backup
 INITDIR=/etc/init.d
 RUNLVLDIR=/etc/rc2.d
