@@ -1,29 +1,17 @@
 # CrashPlan Container with CrashPlan Desktop App
 
-Fork of gfjardim/crashplan
-
 
 To run this container, please use this command:
 
 
-    docker run -d --name="crashplan" \
-          --net="bridge" \
-          -p 4239:4239 \
-          -p 4242:4242 \
-          -p 4243:4243 \
-          -p 4280:4280 \
-          -v "/path/to/your/crashplan/config":"/config":rw \
-          -v "/path/to/your/manifest/dir":"/backup":rw \
-          -e TZ="America/Los_Angeles" \
-          -e VNC_PASSWD="rocketship" \
-          --cap-add SYS_ADMIN \
-          --cap-add DAC_READ_SEARCH \
-          --restart=unless-stopped \
-              endotronic/crashplan:latest
-
-
-###SMB Mounting
-Simply provide an fstab file in /path/to/your/crashplan/config and it will be mounted at start.
+    docker run -d --name="CrashPlan" \
+           --net="bridge" \
+           -p 4242:4242 \
+           -p 4243:4243 \
+           -p 4280:4280 \
+           -v "/path/to/your/crashplan/config":"/config":rw \
+           -v "/path/to/your/manifest/dir":"/backup":rw \
+               gfjardim/crashplan
 
 ###Some supported variables:
 

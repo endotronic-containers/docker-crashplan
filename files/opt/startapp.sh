@@ -1,12 +1,6 @@
 #!/bin/bash
 umask 0000
 
-if [ -f "/config/mount.sh" ]; then
-  echo "Running mount script"
-  chmod u+x /config/mount.sh
-  /config/mount.sh
-fi
-
 TARGETDIR=/usr/local/crashplan
 export SWT_GTK3=0
 
@@ -25,4 +19,4 @@ until [ "$(/etc/init.d/crashplan status)" == "running" ]; do
 done
 
 ${JAVACOMMON} ${GUI_JAVA_OPTS} -classpath "./lib/com.backup42.desktop.jar:./lang:./skin" com.backup42.desktop.CPDesktop \
-              > /config/desktop_output.log 2> /config/desktop_error.log
+              > /config/log/desktop_output.log 2> /config/log/desktop_error.log

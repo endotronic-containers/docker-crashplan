@@ -65,9 +65,6 @@ apt-get install -qy --force-yes --no-install-recommends \
                 python-numpy \
                 git
 
-# Install cifs-utils for mounting SMB shares
-apt-get install -qy --force-yes --no-install-recommends cifs-utils
-
 #########################################
 ##             INSTALLATION            ##
 #########################################
